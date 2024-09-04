@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(RowWidget());
+  runApp(SplashScreen());
 }
 
 class MyApp extends StatelessWidget{
@@ -111,6 +111,39 @@ class ColumnWidget extends StatelessWidget{
         )
     );
   }
+}
 
+class SplashScreen extends StatelessWidget {
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(color: Colors.green,),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/apple.jpg',
+                    width: 200,
+                    height: 200,
+                  ),
+                  SizedBox(
+                    width: 200,
+                    height: 200,
+                  ),
+                  CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.red,),),
+                ],
+              )
+
+            ],
+            ),
+          ),
+        ),
+      );
+  }
 }
