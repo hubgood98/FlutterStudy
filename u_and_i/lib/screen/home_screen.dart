@@ -19,7 +19,7 @@ class _DDay extends StatelessWidget{
   }
 }
 
-class _CoupleImage extends StatelㅇessWidget{
+class _CoupleImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Text('커플 이미지 위젯');
