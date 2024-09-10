@@ -6,7 +6,14 @@ class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Home screen'),
+      backgroundColor: Colors.pink[50],
+      body: SafeArea(top: true, bottom: false,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [_DDay(),_CoupleImage(),],
+        ),
+      ),
     );
   }
   
@@ -22,7 +29,10 @@ class _DDay extends StatelessWidget{
 class _CoupleImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Text('커플 이미지 위젯');
+    return Center(
+      child: Image.asset('asset/img/love.png',height: MediaQuery.of(context).size.height/2,
+      ),
+    );
   }
 
 }
